@@ -1,0 +1,4 @@
+repository "My project/Mantis Shrimp VR V.2@1375871159940@cloud"
+  path "/"
+    br "/main"
+    co "/main"
