@@ -1,4 +1,4 @@
-# Mantis Shrimp VR - Clean All-in-One Starter (Desktop-first)
+# Pistol Shrimp Simulator - Clean All-in-One Starter (Desktop-first)
 
 This is a **fresh Unity project content package**, not a complete Unity project or verified Quest build. It replaces the sequence of v1-v5 patches. Do not import older MantisReef scripts alongside it.
 
