@@ -1,0 +1,2 @@
+C:\Users\prana\MantisShrimpVR-2026-11-14-20-13-23\Mantis Shrimp VR V.2\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\prana\MantisShrimpVR-2026-11-14-20-13-23\Mantis Shrimp VR V.2\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

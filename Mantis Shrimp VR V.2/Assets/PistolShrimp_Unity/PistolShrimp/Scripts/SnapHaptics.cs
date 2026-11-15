@@ -95,6 +95,7 @@ namespace PistolShrimp
 
         static void Impulse(bool right, float amplitude, float duration)
         {
+            if (!ShrimpSettings.Vibration) return;
             amplitude = Mathf.Clamp01(amplitude);
             if (amplitude < 0.02f) return;
             UnityEngine.XR.InputDevice device = UnityEngine.XR.InputDevices.GetDeviceAtXRNode(

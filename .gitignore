@@ -25,3 +25,10 @@ Thumbs.db
 
 # Unity crash reports
 sysinfo.txt
+
+# Builds
+*.apk
+*.aab
+*_BackUpThisFolder_ButDontShipItWithYourGame/
+*_BurstDebugInformation_DoNotShip/
+_to_delete_claude_wrong_path/

@@ -299,7 +299,7 @@ namespace PistolShrimp
 
         void Haptic(bool right, float amplitude, float duration)
         {
-            if (!haptics) return;
+            if (!haptics || !ShrimpSettings.Vibration) return;
             UnityEngine.XR.InputDevice device = UnityEngine.XR.InputDevices.GetDeviceAtXRNode(
                 right ? UnityEngine.XR.XRNode.RightHand : UnityEngine.XR.XRNode.LeftHand);
             if (device.isValid) device.SendHapticImpulse(0u, Mathf.Clamp01(amplitude), duration);

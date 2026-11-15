@@ -269,7 +269,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 13649487}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.6
@@ -289,7 +289,10 @@ MonoBehaviour:
   health: 2
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -726,7 +729,6 @@ GameObject:
   m_Component:
   - component: {fileID: 31795443}
   - component: {fileID: 31795444}
-  - component: {fileID: 31795446}
   - component: {fileID: 31795445}
   m_Layer: 0
   m_Name: V6 Fish1
@@ -760,11 +762,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 31795442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 1.0446008
-  speed: 0.3230789
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &31795445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -780,7 +782,10 @@ MonoBehaviour:
   health: 2
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -793,28 +798,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &31795446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 31795442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1001 &32200080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1689,6 +1672,11 @@ Transform:
   - {fileID: 1060864729}
   m_Father: {fileID: 1360607759}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &70066909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 626004799}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &81433313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1773,7 +1761,6 @@ GameObject:
   m_Component:
   - component: {fileID: 81803681}
   - component: {fileID: 81803682}
-  - component: {fileID: 81803684}
   - component: {fileID: 81803683}
   m_Layer: 0
   m_Name: V6 fish_small
@@ -1807,11 +1794,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 81803680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 0.72712564
-  speed: 0.47593588
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &81803683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1827,7 +1814,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -1840,28 +1830,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &81803684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81803680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &83517106
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,7 +2229,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 105465764}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.6
@@ -2281,7 +2249,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -2506,7 +2477,6 @@ GameObject:
   m_Component:
   - component: {fileID: 113891905}
   - component: {fileID: 113891906}
-  - component: {fileID: 113891908}
   - component: {fileID: 113891907}
   m_Layer: 0
   m_Name: V6 Fish1
@@ -2540,11 +2510,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 113891904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 1.8150815
-  speed: 0.41917884
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &113891907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2560,7 +2530,10 @@ MonoBehaviour:
   health: 2
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -2573,28 +2546,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &113891908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 113891904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &118797205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2729,7 +2680,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 119505765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.6
@@ -2749,7 +2700,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -2794,7 +2748,6 @@ GameObject:
   m_Component:
   - component: {fileID: 119972010}
   - component: {fileID: 119972011}
-  - component: {fileID: 119972013}
   - component: {fileID: 119972012}
   m_Layer: 0
   m_Name: V6 Fish3
@@ -2828,11 +2781,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 119972009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 2.6650965
-  speed: 0.33145428
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &119972012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2848,7 +2801,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -2861,28 +2817,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &119972013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119972009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1001 &120834787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4597,7 +4531,6 @@ GameObject:
   m_Component:
   - component: {fileID: 186731387}
   - component: {fileID: 186731388}
-  - component: {fileID: 186731390}
   - component: {fileID: 186731389}
   m_Layer: 0
   m_Name: V6 Fish1
@@ -4631,11 +4564,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 186731386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 0.85817087
-  speed: 0.48048085
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &186731389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4651,7 +4584,10 @@ MonoBehaviour:
   health: 2
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -4664,28 +4600,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &186731390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186731386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &188671465
 GameObject:
   m_ObjectHideFlags: 0
@@ -4778,7 +4692,7 @@ Transform:
   m_GameObject: {fileID: 188671465}
   serializedVersion: 2
   m_LocalRotation: {x: 0.39709535, y: -0.19772744, z: 0.08803392, w: 0.8918908}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.17, y: 0.37, z: 0.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5739,7 +5653,6 @@ GameObject:
   m_Component:
   - component: {fileID: 223086400}
   - component: {fileID: 223086401}
-  - component: {fileID: 223086403}
   - component: {fileID: 223086402}
   m_Layer: 0
   m_Name: V6 Fish2
@@ -5773,11 +5686,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 223086399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 1.1342483
-  speed: 0.46419352
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &223086402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5793,7 +5706,10 @@ MonoBehaviour:
   health: 3
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -5806,28 +5722,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &223086403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223086399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1001 &223860905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6738,7 +6632,6 @@ GameObject:
   m_Component:
   - component: {fileID: 250871362}
   - component: {fileID: 250871363}
-  - component: {fileID: 250871365}
   - component: {fileID: 250871364}
   m_Layer: 0
   m_Name: V6 fish_small
@@ -6772,11 +6665,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 250871361}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 1.6022587
-  speed: 0.5107597
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &250871364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6792,7 +6685,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -6805,28 +6701,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &250871365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 250871361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &251558612
 GameObject:
   m_ObjectHideFlags: 0
@@ -8645,21 +8519,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 07c09c4cf5b48e94189946584f757eb7, type: 3}
   m_PrefabInstance: {fileID: 347149229}
   m_PrefabAsset: {fileID: 0}
---- !u!115 &348076586
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 0
-  m_ExecutionOrder: 0
-  m_ClassName: MantisNetChase
-  m_Namespace: MantisShrimpVR
-  m_AssemblyName: Assembly-CSharp
 --- !u!1 &348122557
 GameObject:
   m_ObjectHideFlags: 0
@@ -9672,21 +9531,6 @@ Transform:
   - {fileID: 474258557}
   m_Father: {fileID: 1808361212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!115 &393429553
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 0
-  m_ExecutionOrder: 0
-  m_ClassName: MantisNarration
-  m_Namespace: MantisShrimpVR
-  m_AssemblyName: Assembly-CSharp
 --- !u!1001 &395349453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10963,7 +10807,6 @@ GameObject:
   m_Component:
   - component: {fileID: 452745333}
   - component: {fileID: 452745334}
-  - component: {fileID: 452745336}
   - component: {fileID: 452745335}
   m_Layer: 0
   m_Name: V6 Fish3
@@ -10997,11 +10840,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 452745332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 1.0056964
-  speed: 0.42979726
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &452745335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11017,7 +10860,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -11030,28 +10876,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &452745336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452745332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1001 &456527017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12320,7 +12144,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 508148604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.6
@@ -12340,7 +12164,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -14509,7 +14336,6 @@ GameObject:
   m_Component:
   - component: {fileID: 605171717}
   - component: {fileID: 605171718}
-  - component: {fileID: 605171720}
   - component: {fileID: 605171719}
   m_Layer: 0
   m_Name: V6 Fish2
@@ -14543,11 +14369,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 605171716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 1.7276349
-  speed: 0.43416256
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &605171719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14563,7 +14389,10 @@ MonoBehaviour:
   health: 3
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -14576,28 +14405,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &605171720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 605171716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &609720707
 GameObject:
   m_ObjectHideFlags: 0
@@ -15016,7 +14823,6 @@ GameObject:
   m_Component:
   - component: {fileID: 622078996}
   - component: {fileID: 622078997}
-  - component: {fileID: 622078999}
   - component: {fileID: 622078998}
   m_Layer: 0
   m_Name: V6 Fish3
@@ -15050,11 +14856,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 622078995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 2.4316118
-  speed: 0.4615672
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &622078998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15070,7 +14876,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -15083,28 +14892,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &622078999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 622078995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &625060255
 GameObject:
   m_ObjectHideFlags: 0
@@ -15115,7 +14902,6 @@ GameObject:
   m_Component:
   - component: {fileID: 625060256}
   - component: {fileID: 625060257}
-  - component: {fileID: 625060259}
   - component: {fileID: 625060258}
   m_Layer: 0
   m_Name: V6 Fish1
@@ -15149,11 +14935,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 625060255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 0.93921643
-  speed: 0.23407371
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &625060258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15169,7 +14955,10 @@ MonoBehaviour:
   health: 2
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -15182,28 +14971,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &625060259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625060255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1001 &626004799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15214,11 +14981,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 153982007679157697, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_MoveSpeed
-      value: 5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_Name
       value: XR Origin (XR Rig)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15261,6 +15032,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6232745470614056090, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_Height
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232745470614056090, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_Radius
       value: 0.3
       objectReference: {fileID: 0}
@@ -15273,45 +15048,23 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 626004803}
-    - targetCorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      addedObject: {fileID: 626004807}
+    - targetCorrespondingSourceObject: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 626004802}
+      addedObject: {fileID: 1938674603}
   m_SourcePrefab: {fileID: 100100000, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
---- !u!1 &626004800 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-  m_PrefabInstance: {fileID: 626004799}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &626004801 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
   m_PrefabInstance: {fileID: 626004799}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &626004802
+--- !u!114 &626004807
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 626004800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26adbb29225bf05479416d60c2230ea9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VisionVignette
-  color: {r: 0.13, g: 0.07, b: 0.03, a: 1}
-  clearAngle: 40
-  fullAngle: 54
-  strength: 0.44
-  head: {fileID: 0}
---- !u!114 &626004803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 626004800}
+  m_GameObject: {fileID: 70066909}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a941c0d3bd3809f4d978a22d3f2c1f96, type: 3}
@@ -15319,10 +15072,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationSense
   murk: 1
   murkColor: {r: 0.02, g: 0.09, b: 0.12, a: 1}
-  murkDensity: 0.35
-  antennaHaptics: 1
-  maxHaptic: 0.35
-  snapEcho: 0
+  murkDensity: 0.25
+  antennaHaptics: 0
+  maxHaptic: 0.09
+  snapEcho: 1
   echoRange: 10
   echoSpeed: 12
   echoStrength: 1
@@ -15762,7 +15515,6 @@ GameObject:
   m_Component:
   - component: {fileID: 662958945}
   - component: {fileID: 662958946}
-  - component: {fileID: 662958948}
   - component: {fileID: 662958947}
   m_Layer: 0
   m_Name: V6 Fish3
@@ -15796,11 +15548,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 662958944}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 1.9266617
-  speed: 0.2872226
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &662958947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15816,7 +15568,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -15829,28 +15584,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &662958948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 662958944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &668663680
 GameObject:
   m_ObjectHideFlags: 0
@@ -16259,7 +15992,6 @@ GameObject:
   m_Component:
   - component: {fileID: 696768850}
   - component: {fileID: 696768851}
-  - component: {fileID: 696768853}
   - component: {fileID: 696768852}
   m_Layer: 0
   m_Name: V6 Fish1
@@ -16293,11 +16025,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 696768849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 1.9126531
-  speed: 0.40545914
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &696768852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16313,7 +16045,10 @@ MonoBehaviour:
   health: 2
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -16326,28 +16061,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &696768853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696768849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &697430640
 GameObject:
   m_ObjectHideFlags: 0
@@ -18792,7 +18505,6 @@ GameObject:
   m_Component:
   - component: {fileID: 811202924}
   - component: {fileID: 811202925}
-  - component: {fileID: 811202927}
   - component: {fileID: 811202926}
   m_Layer: 0
   m_Name: V6 fish_clown
@@ -18826,11 +18538,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 811202923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 0.886095
-  speed: 0.51624215
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &811202926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18846,7 +18558,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -18859,28 +18574,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &811202927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 811202923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &813688952
 GameObject:
   m_ObjectHideFlags: 0
@@ -19955,7 +19648,6 @@ GameObject:
   m_Component:
   - component: {fileID: 855000161}
   - component: {fileID: 855000162}
-  - component: {fileID: 855000164}
   - component: {fileID: 855000163}
   m_Layer: 0
   m_Name: V6 fish_clown
@@ -19989,11 +19681,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 855000160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 2.4820127
-  speed: 0.3713126
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &855000163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20009,7 +19701,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -20022,28 +19717,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &855000164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 855000160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1001 &856648368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21173,7 +20846,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 904064629}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1725393351}
+  m_Script: {fileID: 11500000, guid: 7160827d857b424ba26cff2dbb9e0387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisPrey
 --- !u!114 &904064633
@@ -21191,7 +20864,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -21579,6 +21255,10 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_Name
       value: XR Device Simulator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22115,7 +21795,6 @@ GameObject:
   m_Component:
   - component: {fileID: 960563739}
   - component: {fileID: 960563740}
-  - component: {fileID: 960563742}
   - component: {fileID: 960563741}
   m_Layer: 0
   m_Name: V6 fish_small
@@ -22149,11 +21828,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 960563738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 1.9033685
-  speed: 0.28751153
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &960563741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22169,7 +21848,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -22182,28 +21864,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &960563742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 960563738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &961885210
 GameObject:
   m_ObjectHideFlags: 0
@@ -22502,7 +22162,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 975893121}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.6
@@ -22522,7 +22182,10 @@ MonoBehaviour:
   health: 2
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -23852,7 +23515,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1013808444}
   - component: {fileID: 1013808445}
-  - component: {fileID: 1013808447}
   - component: {fileID: 1013808446}
   m_Layer: 0
   m_Name: V6 fish_clown
@@ -23886,11 +23548,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1013808443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 1.0444069
-  speed: 0.22378103
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &1013808446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23906,7 +23568,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -23919,28 +23584,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1013808447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013808443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1001 &1017776663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24099,7 +23742,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1021457053}
   - component: {fileID: 1021457054}
-  - component: {fileID: 1021457056}
   - component: {fileID: 1021457055}
   m_Layer: 0
   m_Name: V6 Fish3
@@ -24133,11 +23775,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1021457052}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 2.2289495
-  speed: 0.33339795
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &1021457055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24153,7 +23795,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -24166,28 +23811,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1021457056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1021457052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &1023370977
 GameObject:
   m_ObjectHideFlags: 0
@@ -24293,7 +23916,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1025508208}
   - component: {fileID: 1025508209}
-  - component: {fileID: 1025508211}
   - component: {fileID: 1025508210}
   m_Layer: 0
   m_Name: V6 fish_clown
@@ -24327,11 +23949,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1025508207}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 1.5587385
-  speed: 0.34458217
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &1025508210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24347,7 +23969,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -24360,28 +23985,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1025508211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025508207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1001 &1029595234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24614,7 +24217,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1033276248}
   - component: {fileID: 1033276249}
-  - component: {fileID: 1033276251}
   - component: {fileID: 1033276250}
   m_Layer: 0
   m_Name: V6 Fish3
@@ -24648,11 +24250,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1033276247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 1.5707794
-  speed: 0.31450948
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &1033276250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24668,7 +24270,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -24681,28 +24286,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1033276251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033276247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &1037472854
 GameObject:
   m_ObjectHideFlags: 0
@@ -25317,7 +24900,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1072734368}
   - component: {fileID: 1072734369}
-  - component: {fileID: 1072734371}
   - component: {fileID: 1072734370}
   m_Layer: 0
   m_Name: V6 fish_clown
@@ -25351,11 +24933,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1072734367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 1.5785855
-  speed: 0.45551774
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &1072734370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25371,7 +24953,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -25384,28 +24969,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1072734371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072734367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &1074974010
 GameObject:
   m_ObjectHideFlags: 0
@@ -25575,7 +25138,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1087448900}
   - component: {fileID: 1087448901}
-  - component: {fileID: 1087448903}
   - component: {fileID: 1087448902}
   m_Layer: 0
   m_Name: V6 Fish3
@@ -25609,11 +25171,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1087448899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 1.3880426
-  speed: 0.38344696
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &1087448902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25629,7 +25191,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -25642,28 +25207,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1087448903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1087448899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &1087662934
 GameObject:
   m_ObjectHideFlags: 0
@@ -26180,7 +25723,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1108500122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.6
@@ -26200,7 +25743,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -27268,7 +26814,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1143074815}
   - component: {fileID: 1143074816}
-  - component: {fileID: 1143074818}
   - component: {fileID: 1143074817}
   m_Layer: 0
   m_Name: V6 Fish2
@@ -27302,11 +26847,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1143074814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 0.71236897
-  speed: 0.43834472
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &1143074817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27322,7 +26867,10 @@ MonoBehaviour:
   health: 3
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -27335,28 +26883,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1143074818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143074814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1001 &1146591238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28393,7 +27919,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1177091927}
   - component: {fileID: 1177091928}
-  - component: {fileID: 1177091930}
   - component: {fileID: 1177091929}
   m_Layer: 0
   m_Name: V6 fish_small
@@ -28427,11 +27952,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1177091926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 2.3028712
-  speed: 0.40491906
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &1177091929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28447,7 +27972,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -28460,28 +27988,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1177091930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1177091926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &1179492639
 GameObject:
   m_ObjectHideFlags: 0
@@ -29257,7 +28763,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1208409581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 393429553}
+  m_Script: {fileID: 11500000, guid: c3ffd0b8021f4060aa5b6367eafaf043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisNarration
   player: {fileID: 0}
@@ -30273,7 +29779,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1260664648}
   - component: {fileID: 1260664649}
-  - component: {fileID: 1260664651}
   - component: {fileID: 1260664650}
   m_Layer: 0
   m_Name: V6 Fish3
@@ -30307,11 +29812,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1260664647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 1.4049827
-  speed: 0.54090035
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &1260664650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30327,7 +29832,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -30340,28 +29848,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1260664651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260664647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1001 &1261681233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30520,7 +30006,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1265104389}
   - component: {fileID: 1265104390}
-  - component: {fileID: 1265104392}
   - component: {fileID: 1265104391}
   m_Layer: 0
   m_Name: V6 Fish3
@@ -30554,11 +30039,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1265104388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 0.7222615
-  speed: 0.33766055
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &1265104391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30574,7 +30059,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -30587,28 +30075,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1265104392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265104388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &1266814970
 GameObject:
   m_ObjectHideFlags: 0
@@ -31361,7 +30827,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1298268773}
   - component: {fileID: 1298268774}
-  - component: {fileID: 1298268776}
   - component: {fileID: 1298268775}
   m_Layer: 0
   m_Name: V6 Fish3
@@ -31395,11 +30860,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1298268772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 1.2633137
-  speed: 0.30316034
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &1298268775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31415,7 +30880,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -31428,28 +30896,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1298268776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1298268772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &1304294134
 GameObject:
   m_ObjectHideFlags: 0
@@ -31492,7 +30938,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1304618085}
   - component: {fileID: 1304618086}
-  - component: {fileID: 1304618088}
   - component: {fileID: 1304618087}
   m_Layer: 0
   m_Name: V6 Fish3
@@ -31526,11 +30971,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1304618084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 2.7115932
-  speed: 0.5449324
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &1304618087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31546,7 +30991,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -31559,28 +31007,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1304618088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1304618084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &1307268477
 GameObject:
   m_ObjectHideFlags: 0
@@ -31877,7 +31303,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1333094622}
   - component: {fileID: 1333094623}
-  - component: {fileID: 1333094625}
   - component: {fileID: 1333094624}
   m_Layer: 0
   m_Name: V6 fish_clown
@@ -31911,11 +31336,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1333094621}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
-  radius: 2.17011
-  speed: 0.36128926
+  radius: 1.6
+  speed: 0.4
 --- !u!114 &1333094624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31931,7 +31356,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -31944,28 +31372,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1333094625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1333094621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &1333313025
 GameObject:
   m_ObjectHideFlags: 0
@@ -32174,21 +31580,6 @@ Transform:
   - {fileID: 430453754}
   m_Father: {fileID: 1808361212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!115 &1347326241
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 0
-  m_ExecutionOrder: 0
-  m_ClassName: MantisFishSwim
-  m_Namespace: MantisShrimpVR
-  m_AssemblyName: Assembly-CSharp
 --- !u!1 &1350469616
 GameObject:
   m_ObjectHideFlags: 0
@@ -32673,7 +32064,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1371676914}
   - component: {fileID: 1371676915}
-  - component: {fileID: 1371676917}
   - component: {fileID: 1371676916}
   m_Layer: 0
   m_Name: V6 fish_clown
@@ -32707,7 +32097,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1371676913}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.709353
@@ -32727,7 +32117,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -32740,28 +32133,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1371676917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1371676913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &1375075781
 GameObject:
   m_ObjectHideFlags: 0
@@ -32772,7 +32143,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1375075782}
   - component: {fileID: 1375075783}
-  - component: {fileID: 1375075785}
   - component: {fileID: 1375075784}
   m_Layer: 0
   m_Name: V6 fish_small
@@ -32806,7 +32176,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1375075781}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 2.1921077
@@ -32826,7 +32196,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -32839,28 +32212,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1375075785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375075781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1001 &1378510903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33433,7 +32784,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1395693251}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 348076586}
+  m_Script: {fileID: 11500000, guid: 59b9631d94bf4495ae87d6507f63eb41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisNetChase
   player: {fileID: 0}
@@ -33992,7 +33343,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1435012682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.6
@@ -34012,7 +33363,10 @@ MonoBehaviour:
   health: 3
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -35041,7 +34395,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1466047918}
   - component: {fileID: 1466047919}
-  - component: {fileID: 1466047921}
   - component: {fileID: 1466047920}
   m_Layer: 0
   m_Name: V6 Fish2
@@ -35075,7 +34428,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1466047917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 2.3183036
@@ -35095,7 +34448,10 @@ MonoBehaviour:
   health: 3
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -35108,28 +34464,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1466047921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1466047917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &1473361638
 GameObject:
   m_ObjectHideFlags: 0
@@ -35278,7 +34612,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1479908040}
   - component: {fileID: 1479908041}
-  - component: {fileID: 1479908043}
   - component: {fileID: 1479908042}
   m_Layer: 0
   m_Name: V6 Fish1
@@ -35312,7 +34645,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1479908039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 2.0092194
@@ -35332,7 +34665,10 @@ MonoBehaviour:
   health: 2
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -35345,28 +34681,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1479908043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479908039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &1480971094
 GameObject:
   m_ObjectHideFlags: 0
@@ -37077,7 +36391,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1565781822}
   - component: {fileID: 1565781823}
-  - component: {fileID: 1565781825}
   - component: {fileID: 1565781824}
   m_Layer: 0
   m_Name: V6 fish_small
@@ -37111,7 +36424,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1565781821}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.4415025
@@ -37131,7 +36444,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -37144,28 +36460,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1565781825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565781821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1001 &1566573047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37324,7 +36618,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1570604526}
   - component: {fileID: 1570604527}
-  - component: {fileID: 1570604529}
   - component: {fileID: 1570604528}
   m_Layer: 0
   m_Name: V6 Fish2
@@ -37358,7 +36651,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1570604525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 2.5804532
@@ -37378,7 +36671,10 @@ MonoBehaviour:
   health: 3
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -37391,28 +36687,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1570604529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570604525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1001 &1572957111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40155,7 +39429,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1689762156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1725393351}
+  m_Script: {fileID: 11500000, guid: 7160827d857b424ba26cff2dbb9e0387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisPrey
 --- !u!114 &1689762160
@@ -40173,7 +39447,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -40474,7 +39751,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1706432379}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.6
@@ -40494,7 +39771,10 @@ MonoBehaviour:
   health: 3
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -40635,7 +39915,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1715227431}
   - component: {fileID: 1715227432}
-  - component: {fileID: 1715227434}
   - component: {fileID: 1715227433}
   m_Layer: 0
   m_Name: V6 Fish2
@@ -40669,7 +39948,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1715227430}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 2.7034276
@@ -40689,7 +39968,10 @@ MonoBehaviour:
   health: 3
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -40702,28 +39984,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1715227434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715227430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1001 &1716440518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40872,21 +40132,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 83ea88d9162a2524c94edd02e4d80a69, type: 3}
   m_PrefabInstance: {fileID: 1721482522}
   m_PrefabAsset: {fileID: 0}
---- !u!115 &1725393351
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 0
-  m_ExecutionOrder: 0
-  m_ClassName: MantisPrey
-  m_Namespace: MantisShrimpVR
-  m_AssemblyName: Assembly-CSharp
 --- !u!1001 &1728054758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41416,7 +40661,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1752458884}
   - component: {fileID: 1752458885}
-  - component: {fileID: 1752458887}
   - component: {fileID: 1752458886}
   m_Layer: 0
   m_Name: V6 fish_clown
@@ -41450,7 +40694,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1752458883}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.9065248
@@ -41470,7 +40714,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -41483,28 +40730,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1752458887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752458883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &1752628128
 GameObject:
   m_ObjectHideFlags: 0
@@ -41725,7 +40950,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1755720695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1725393351}
+  m_Script: {fileID: 11500000, guid: 7160827d857b424ba26cff2dbb9e0387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisPrey
 --- !u!114 &1755720699
@@ -41743,7 +40968,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -41820,7 +41048,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1767761627}
   - component: {fileID: 1767761628}
-  - component: {fileID: 1767761630}
   - component: {fileID: 1767761629}
   m_Layer: 0
   m_Name: V6 fish_small
@@ -41854,7 +41081,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1767761626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.3593307
@@ -41874,7 +41101,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -41887,28 +41117,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1767761630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1767761626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &1768751848
 GameObject:
   m_ObjectHideFlags: 0
@@ -42509,7 +41717,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1788643270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.6
@@ -42529,7 +41737,10 @@ MonoBehaviour:
   health: 3
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -42830,7 +42041,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1796873916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.6
@@ -42850,7 +42061,10 @@ MonoBehaviour:
   health: 2
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -43758,7 +42972,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1825004924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1725393351}
+  m_Script: {fileID: 11500000, guid: 7160827d857b424ba26cff2dbb9e0387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisPrey
 --- !u!114 &1825004928
@@ -43776,7 +42990,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -45774,8 +44991,57 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6592458952533096795, guid: 2ae65ade069d26344a69bfa0fb3d90e0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1904072555}
+    - targetCorrespondingSourceObject: {fileID: 6592458952533096795, guid: 2ae65ade069d26344a69bfa0fb3d90e0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1904072556}
   m_SourcePrefab: {fileID: 100100000, guid: 2ae65ade069d26344a69bfa0fb3d90e0, type: 3}
+--- !u!1 &1904072554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6592458952533096795, guid: 2ae65ade069d26344a69bfa0fb3d90e0, type: 3}
+  m_PrefabInstance: {fileID: 1904072553}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1904072555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904072554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba71ee2fd0f02b94eb16edf145dacd5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.SnapHaptics
+  player: {fileID: 0}
+  crackStrength: 1
+  crackTime: 0.05
+  rumbleStrength: 0.6
+  rumbleTime: 0.35
+  collapseThump: 1
+  collapseDelay: 0.45
+  collapseStrength: 0.45
+  otherHandShare: 0.3
+--- !u!114 &1904072556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904072554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26adbb29225bf05479416d60c2230ea9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VisionVignette
+  color: {r: 0.13, g: 0.07, b: 0.03, a: 1}
+  clearAngle: 22
+  fullAngle: 42
+  strength: 0.95
+  head: {fileID: 0}
 --- !u!1 &1906260447
 GameObject:
   m_ObjectHideFlags: 0
@@ -46762,6 +46028,55 @@ Transform:
   - {fileID: 412839945}
   m_Father: {fileID: 1808361212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1938674598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 626004799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1938674603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938674598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1001 &1941814656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48062,7 +47377,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2000438196}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1725393351}
+  m_Script: {fileID: 11500000, guid: 7160827d857b424ba26cff2dbb9e0387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisPrey
 --- !u!114 &2000438200
@@ -48080,7 +47395,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -48199,7 +47517,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2005998914}
   - component: {fileID: 2005998915}
-  - component: {fileID: 2005998917}
   - component: {fileID: 2005998916}
   m_Layer: 0
   m_Name: V6 fish_small
@@ -48233,7 +47550,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2005998913}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 2.0889895
@@ -48253,7 +47570,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -48266,28 +47586,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2005998917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005998913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &2007801942
 GameObject:
   m_ObjectHideFlags: 0
@@ -48298,7 +47596,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2007801943}
   - component: {fileID: 2007801944}
-  - component: {fileID: 2007801946}
   - component: {fileID: 2007801945}
   m_Layer: 0
   m_Name: V6 Fish1
@@ -48332,7 +47629,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2007801942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 2.7841237
@@ -48352,7 +47649,10 @@ MonoBehaviour:
   health: 2
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -48365,28 +47665,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2007801946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2007801942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1001 &2008891686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48651,7 +47929,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2030860527}
   - component: {fileID: 2030860528}
-  - component: {fileID: 2030860530}
   - component: {fileID: 2030860529}
   m_Layer: 0
   m_Name: V6 Fish3
@@ -48685,7 +47962,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2030860526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.8561332
@@ -48705,7 +47982,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -48718,28 +47998,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2030860530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030860526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &2038305701
 GameObject:
   m_ObjectHideFlags: 0
@@ -50380,7 +49638,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2098394626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1725393351}
+  m_Script: {fileID: 11500000, guid: 7160827d857b424ba26cff2dbb9e0387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisPrey
 --- !u!114 &2098394630
@@ -50398,7 +49656,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -50893,7 +50154,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2114456325}
   - component: {fileID: 2114456326}
-  - component: {fileID: 2114456328}
   - component: {fileID: 2114456327}
   m_Layer: 0
   m_Name: V6 Fish3
@@ -50927,7 +50187,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2114456324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.5722451
@@ -50947,7 +50207,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -50960,28 +50223,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2114456328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114456324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &2117591587
 GameObject:
   m_ObjectHideFlags: 0
@@ -51162,7 +50403,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2127883776}
   - component: {fileID: 2127883777}
-  - component: {fileID: 2127883779}
   - component: {fileID: 2127883778}
   m_Layer: 0
   m_Name: V6 Fish3
@@ -51196,7 +50436,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2127883775}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 1.0069418
@@ -51216,7 +50456,10 @@ MonoBehaviour:
   health: 1
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -51229,28 +50472,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2127883779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127883775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &2128697722
 GameObject:
   m_ObjectHideFlags: 0
@@ -51261,7 +50482,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2128697723}
   - component: {fileID: 2128697724}
-  - component: {fileID: 2128697726}
   - component: {fileID: 2128697725}
   m_Layer: 0
   m_Name: V6 Fish2
@@ -51295,7 +50515,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2128697722}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1347326241}
+  m_Script: {fileID: 11500000, guid: b4f7ac9429894f6e91458239a5ddd593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MantisShrimpVR.MantisFishSwim
   radius: 0.90217245
@@ -51315,7 +50535,10 @@ MonoBehaviour:
   health: 3
   stopOtherScriptsOnDeath: 1
   detachOnDeath: 1
+  damageMultiplier: 1
+  showHealthBar: 1
   sinkSpeed: 0.6
+  nutrition: 25
   mouthRadius: 0.28
   mouthOffset: {x: 0, y: -0.12, z: 0.08}
   eatSound: {fileID: 0}
@@ -51328,28 +50551,6 @@ MonoBehaviour:
   onEaten:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2128697726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128697722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15cec692071f8f4cb05952271f74297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PistolShrimp.VibrationEmitter
-  voice: 0
-  customClip: {fileID: 0}
-  maxVolume: 0.9
-  pitchWhenStill: 0.75
-  pitchWhenFast: 1.35
-  range: 12
-  restingLevel: 0
-  speedForFull: 1.5
-  attackTime: 0.08
-  releaseTime: 0.5
 --- !u!1 &2129199012
 GameObject:
   m_ObjectHideFlags: 0

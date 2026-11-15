@@ -94,7 +94,10 @@ namespace PistolShrimp
 
             if (murk)
             {
-                RenderSettings.fogColor = murkColor;
+                // The Brightness option lightens or darkens the murk along with the lights.
+                Color murkNow = murkColor * ShrimpSettings.Brightness;
+                murkNow.a = 1f;
+                RenderSettings.fogColor = murkNow;
                 RenderSettings.fogDensity = murkDensity;
                 if (_cam == null)
                 {
@@ -107,7 +110,7 @@ namespace PistolShrimp
                         _cam.clearFlags = CameraClearFlags.SolidColor;
                     }
                 }
-                if (_cam != null) _cam.backgroundColor = murkColor;
+                if (_cam != null) _cam.backgroundColor = murkNow;
             }
 
             float left = 0f, right = 0f, total = 0f, best = 0f;
@@ -168,6 +171,7 @@ namespace PistolShrimp
 
         void Buzz(UnityEngine.XR.XRNode node, float level)
         {
+            if (!ShrimpSettings.Vibration) return;
             float amplitude = Mathf.Clamp01(level) * maxHaptic;
             if (amplitude < 0.02f) return;
             UnityEngine.XR.InputDevice device = UnityEngine.XR.InputDevices.GetDeviceAtXRNode(node);

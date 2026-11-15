@@ -1,0 +1,10 @@
+# ninja log v5
+21	1312	8164384646290904	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	40d9cf48efc47b54
+60	1323	8164384646390977	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	9a7abe760ff10dd1
+0	1331	8164384646470109	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	3ab64942bebf3658
+7	1335	8164384646525337	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	48244fa6f0658204
+49	1341	8164384646591066	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	d2ff05c647dc21b1
+35	1412	8164384647283525	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	5529fd8d67b4892d
+14	1440	8164384647554231	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	4700964ed6a56bfe
+77	1456	8164384647724693	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	cf16d7d65e388e79
+1456	1669	8164384649833452	C:/Users/prana/MantisShrimpVR-2026-11-14-20-13-23/Mantis Shrimp VR V.2/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/j5f5ju4i/obj/arm64-v8a/libgame.so	d88f67b4f53b30ad
